@@ -50,41 +50,104 @@
             </tr>
           </tbody></table>
 
-          <table style="width:100%;padding:20px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-            <tr onmouseout="maptracker_stop()" onmouseover="maptracker_start()">
-
-              <div style="display: flex; flex-direction: row; margin-left: 16px; justify-content: space-between;"> 
-                <div style="width: 160px;">
-                  <img src='images/maptracker.png' width="160" >
-                </div>
-
-                <div style="flex: 1; margin-left: 50px;">
-                  <a href="https://map-tracker.github.io/">
-                    <papertitle>MapTracker: Tracking with Strided Memory Fusion for Consistent Vector HD Mapping</papertitle>
-                  </a>
-                  <br>
-                  <a href="https://jcchen.me/">Jiacheng Chen*</a>, 
-                  <strong>Yuefan Wu*</strong>, 
-                  <a href="https://christinatan0704.github.io/mysite/">Jiaqi Tan*</a>, 
-                  <a href="https://www.cs.sfu.ca/~hangma/">Hang Ma</a>, 
-                  <a href="https://yasu-furukawa.github.io/">Yasutaka Furukawa</a>, 
-  
-                  <br>
-                  <em>ECCV</em>, 2024 (Oral)
-                  <br>
-                  <a href="https://map-tracker.github.io/">project page</a>
-                  /
-                  <a href="https://arxiv.org/abs/2403.15951">arXiv</a>
-                  /
-                  <a href="https://github.com/woodfrog/maptracker">code</a>
-                  <p></p>
-
-                </div>
-
+          <table style="width:100%;padding:0px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+          <tr onmouseout="clift_stop()" onmouseover="clift_start()">
+            <td style="padding:16px;width:20%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='clift_image'><video id="clift_video" width=100% muted loop>
+                <source src="images/clift.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/clift.jpg' width=100%>
               </div>
-            </table>
+              <script type="text/javascript">
+                function clift_start() {
+                  document.getElementById('clift_image').style.opacity = "1";
+                  document.getElementById('clift_video').play();
+                  // Hide the background image when video is playing
+                  document.getElementById('clift_image').parentElement.querySelector('img').style.opacity = "0";
+                }
 
+                function clift_stop() {
+                  document.getElementById('clift_image').style.opacity = "0";
+                  document.getElementById('clift_video').pause();
+                  // Show the background image when video is stopped
+                  document.getElementById('clift_image').parentElement.querySelector('img').style.opacity = "1";
+                }
+                clift_stop()
+              </script>
+            </td>
+            <td style="padding:8px;width:80%;vertical-align:middle">
+              <a href="https://clift-nvs.github.io/">
+                <span class="papertitle">CLiFT: Compressive Light-Field Tokens for Compute-Efficient and Adaptive Neural Rendering</span>
+              </a>
+              <br>
+              <a href="https://eric-zqwang.github.io/">Zhengqing Wang</a>,
+              <strong>Yuefan Wu</strong> ,
+              <a href="https://jcchen.me/">Jiacheng Chen</a>,
+              <a href="https://zhangfuyang.github.io/">Fuyang Zhang</a>,
+              <a href="https://yasu-furukawa.github.io/">Yasutaka Furukawa</a>
+              <br>
+              <em>arXiv</em>, 2025
+              <br>
+              <a href="https://clift-nvs.github.io/">project page</a>
+              /
+              <a href="https://arxiv.org/abs/2507.08776">arXiv</a>
+              /
+              <a href="https://github.com/eric-zqwang/CLiFT">code</a>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="maptracker_stop()" onmouseover="maptracker_start()">
+            <td style="padding:16px;width:20%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='maptracker_image'><video id="maptracker_video" width=100% muted loop>
+                <source src="images/maptracker_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/maptracker.png' width=100%>
+              </div>
+              <script type="text/javascript">
+                function maptracker_start() {
+                  document.getElementById('maptracker_image').style.opacity = "1";
+                  document.getElementById('maptracker_video').play();
+                  // Hide the background image when video is playing
+                  document.getElementById('maptracker_image').parentElement.querySelector('img').style.opacity = "0";
+                }
+
+                function maptracker_stop() {
+                  document.getElementById('maptracker_image').style.opacity = "0";
+                  document.getElementById('maptracker_video').pause();
+                  // Show the background image when video is stopped
+                  document.getElementById('maptracker_image').parentElement.querySelector('img').style.opacity = "1";
+                }
+                maptracker_stop()
+              </script>
+            </td>
+            <td style="padding:8px;width:80%;vertical-align:middle">
+              <a href="https://clift-nvs.github.io/">
+                <span class="papertitle">CLiFT: Compressive Light-Field Tokens for Compute-Efficient and Adaptive Neural Rendering</span>
+              </a>
+              <br>
+              <a href="https://eric-zqwang.github.io/">Zhengqing Wang</a>,
+              <strong>Yuefan Wu</strong> ,
+              <a href="https://jcchen.me/">Jiacheng Chen</a>,
+              <a href="https://zhangfuyang.github.io/">Fuyang Zhang</a>,
+              <a href="https://yasu-furukawa.github.io/">Yasutaka Furukawa</a>
+              <br>
+              <em>arXiv</em>, 2025
+              <br>
+              <a href="https://clift-nvs.github.io/">project page</a>
+              /
+              <a href="https://arxiv.org/abs/2507.08776">arXiv</a>
+              /
+              <a href="https://github.com/eric-zqwang/CLiFT">code</a>
+            </td>
+          </tr>
+
+          
 
           <table style="width:100%;padding:20px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr onmouseout="casa_stop()" onmouseover="casa_start()">
