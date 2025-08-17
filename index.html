@@ -153,13 +153,14 @@
 
           
 
-          <table style="width:100%;padding:20px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- <table style="width:100%;padding:20px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr onmouseout="casa_stop()" onmouseover="casa_start()">
 
-              <div style="display: flex; flex-direction: row; margin-left: 16px; justify-content: space-between;"> 
+              <div style="display: flex; flex-direction: row; margin-left: 30px; justify-content: space-between;"> 
                 <div style="width: 160px;">
-                  <img src='images/CASA_pipeline.jpg' width="160" >
+                  <img src='images/CASA_pipeline_cropped.png' width=100% >
                 </div>
+
 
                 <div style="flex: 1; margin-left: 50px;">
                   <a href="https://ivenwu.com/CASA">
@@ -185,8 +186,55 @@
                 </div>
 
               </div>
-          </table>
+          </table> -->
             
+        
+          <tr onmouseout="casa_stop()" onmouseover="casa_start()">
+            <td style="padding:16px;width:20%;vertical-align:middle">
+              <div class="one">
+                <!-- <div class="two" id='casa_image'><video id="casa_video" width=100% muted loop>
+                <source src="images/clift.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div> -->
+                <img src='images/CASA_pipeline_cropped.png' width=100%>
+              </div>
+              <script type="text/javascript">
+                function casa_start() {
+                  document.getElementById('casa_image').style.opacity = "1";
+                  document.getElementById('casa_video').play();
+                  // Hide the background image when video is playing
+                  document.getElementById('casa_image').parentElement.querySelector('img').style.opacity = "0";
+                }
+
+                function casa_stop() {
+                  document.getElementById('casa_image').style.opacity = "0";
+                  document.getElementById('casa_video').pause();
+                  // Show the background image when video is stopped
+                  document.getElementById('casa_image').parentElement.querySelector('img').style.opacity = "1";
+                }
+                casa_stop()
+              </script>
+            </td>
+            <td style="padding:8px;width:80%;vertical-align:middle">
+              <a href="https://ivenwu.com/CASA">
+                <span class="papertitle">CASA: Category-agnostic Skeletal Animal Reconstruction</span>
+              </a>
+              <br>
+              <strong>Yuefan Wu*</strong>, 
+              <a href="http://zeyuan-chen.com/">Zeyuan Chen*</a>, 
+              <a href="https://stevenlsw.github.io/">Shaowei Liu</a>, 
+              <a href="https://jason718.github.io/">Zhongzheng Ren</a>, 
+              <a href="http://shenlong.web.illinois.edu/">Shenlong Wang</a>, 
+              <br>
+              <em>NeurIPS</em> 2022
+              <br>
+              <a href="https://ivenwu.com/CASA">project page</a>
+              /
+              <a href="https://arxiv.org/abs/2211.03568">arXiv</a>
+              /
+              <a href="https://github.com/Iven-Wu/CASA">code</a>
+            </td>
+          </tr>
 
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="5">
               <tr>
